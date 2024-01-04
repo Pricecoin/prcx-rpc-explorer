@@ -14,31 +14,31 @@ for (let i = 1; i < 34; i++) {
 const currencyUnits = [
 	{
 		type:"native",
-		name:"BTC",
+		name:"PRCX",
 		multiplier:1,
 		default:true,
-		values:["", "btc", "BTC"],
+		values:["", "prcx", "PRCX"],
 		decimalPlaces:8
 	},
 	{
 		type:"native",
-		name:"mBTC",
+		name:"lites",
 		multiplier:1000,
-		values:["mbtc"],
+		values:["lites"],
 		decimalPlaces:5
 	},
 	{
 		type:"native",
-		name:"bits",
+		name:"photons",
 		multiplier:1000000,
-		values:["bits"],
+		values:["photos"],
 		decimalPlaces:2
 	},
 	{
 		type:"native",
 		name:"sat",
 		multiplier:100000000,
-		values:["sat", "satoshi"],
+		values:["sats", "latoshis"],
 		decimalPlaces:0
 	},
 	{
