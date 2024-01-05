@@ -459,9 +459,9 @@ async function onRpcConnectionVerified(getnetworkinfo, getblockchaininfo) {
 		global.pruneHeight = getblockchaininfo.pruneheight;
 	}
 
-	var bitcoinCoreVersionRegex = /^.*\/Satoshi\:(.*)\/.*$/;
+	var pricecoinxCoreVersionRegex = /^.*\/Satoshi\:(.*)\/.*$/;
 
-	var match = bitcoinCoreVersionRegex.exec(getnetworkinfo.subversion);
+	var match = pricecoinxCoreVersionRegex.exec(getnetworkinfo.subversion);
 	if (match) {
 		global.prcxNodeVersion = match[1];
 
