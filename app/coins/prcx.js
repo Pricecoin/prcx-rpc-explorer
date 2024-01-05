@@ -108,10 +108,10 @@ module.exports = {
 	minTxWeight: 166 * 4, // hack
 	difficultyAdjustmentBlockCount: 2016,
 	maxSupplyByNetwork: {
-		"main": new Decimal(20999817.31308491), // ref: https://pricecoinx.stackexchange.com/a/38998
-		"test": new Decimal(21000000),
-		"regtest": new Decimal(21000000),
-		"signet": new Decimal(21000000)
+		"main": new Decimal(50000000), // ref: https://bitcoin.stackexchange.com/a/38998
+		"test": new Decimal(50000000),
+		"regtest": new Decimal(50000000),
+		"signet": new Decimal(50000000)
 	},
 	targetBlockTimeSeconds: 600,
 	targetBlockTimeMinutes: 10,
@@ -122,7 +122,7 @@ module.exports = {
 	feeSatoshiPerByteBucketMaxima: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 50, 75, 100, 150],
 	
 	halvingBlockIntervalsByNetwork: {
-		"main": 210000,
+		"main": 1000000,
 		"test": 210000,
 		"regtest": 150,
 		"signet": 210000
