@@ -1,7 +1,7 @@
 extends layout
 
 block headContent
-	title Bitcoin Explorer
+	title PricecoinX Explorer
 	
 block content
 
@@ -46,7 +46,7 @@ block content
 	else
 
 		+dismissableAlert("homepageWelcomeBannerDismissed")
-			h5 Bitcoin Explorer
+			h5 PricecoinX Explorer
 				span.fw-light :
 					span.fst-italic.ms-1 The free, open-source, easy-to-setup, easy-to-use, self-hosted explorer
 			
@@ -57,7 +57,7 @@ block content
 
 			.mt-2
 				if (global.sourcecodeProjectMetadata)
-					a.btn.btn-sm.btn-primary.mb-2.mb-md-1.me-3(href="https://github.com/janoside/btc-rpc-explorer", title="View source code", data-bs-toggle="tooltip", data-bs-placement="bottom")
+					a.btn.btn-sm.btn-primary.mb-2.mb-md-1.me-3(href="https://github.com/janoside/prcx-rpc-explorer", title="View source code", data-bs-toggle="tooltip", data-bs-placement="bottom")
 						i.bi-git.fs-6.text-white.me-2
 						| View Source
 
@@ -78,13 +78,13 @@ block content
 
 				if (blocksLeft > 0)
 					+blockCountdown("Taproot Activation", blocksLeft)
-						.mb-2 The softfork known as Taproot will activate on Bitcoin's mainnet at block height 709,632. After activation, any Bitcoin user will be able to use a new address type that enables new features and functionality. The Taproot upgrade has been ~4 years in the making!
+						.mb-2 The softfork known as Taproot will activate on PricecoinX's mainnet at block height 709,632. After activation, any PricecoinX user will be able to use a new address type that enables new features and functionality. The Taproot upgrade has been ~4 years in the making!
 						| Read more about Taproot's history from Pieter Wuille (one of its architects) <a href="https://twitter.com/pwuille/status/1403725170993336322">here</a>.
 
 				else if (blocksLeft <= 0 && blocksLeft > -144)
 					.alert.alert-success
 						h5 Taproot: Activation Height Reached 🎉
-						| Taproot has activated on Bitcoin's mainnet as of block height <a href="./block-height/709632">709,632</a>!
+						| Taproot has activated on PricecoinX's mainnet as of block height <a href="./block-height/709632">709,632</a>!
 				
 
 		if (getblockchaininfo.initialblockdownload && !["regtest", "signet"].includes(global.activeBlockchain))

@@ -17,25 +17,25 @@ Install NVM from https://github.com/nvm-sh/nvm
     
 Misc setup
 
-    # add user for btc-related stuff
-    adduser bitcoin # leave everything blank if you want
+    # add user for prcx-related stuff
+    adduser pricecoinx # leave everything blank if you want
     
     # gen self-signed cert
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt
     
     # get nginx config
-    wget https://raw.githubusercontent.com/janoside/btc-rpc-explorer/master/docs/explorer.btc21.org.conf
+    wget https://raw.githubusercontent.com/janoside/prcx-rpc-explorer/master/docs/explorer.btc21.org.conf
     mv explorer.btc21.org.conf /etc/nginx/sites-available/bitcoinexplorer.org
 
 Get source, npm install
 
-    cd /home/bitcoin
-    git clone https://github.com/janoside/btc-rpc-explorer.git
-    cd /home/bitcoin/btc-rpc-explorer
+    cd /home/pricecoinx
+    git clone https://github.com/janoside/prcx-rpc-explorer.git
+    cd /home/pricecoinx/prcx-rpc-explorer
     npm install
     
     # startup via pm2
-    pm2 start bin/www --name "btc"
+    pm2 start bin/www --name "prcx"
     
     # get letsencrypt cert
     certbot --nginx -d bitcoinexplorer.org

@@ -16,13 +16,13 @@
             "name": "1THash",
             "link": "https://www.1thash.top"
         },
-        "/BTC.COM/" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+        "/PRCX.COM/" : {
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
-        "/BTC.com/" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+        "/PRCX.com/" : {
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "BITFARMS": {
             "name": "Bitfarms",
@@ -36,7 +36,7 @@
             "name": "Huobi.pool",
             "link": "https://www.hpt.com/"
         },
-        "/E2M & BTC.TOP/": {
+        "/E2M & PRCX.TOP/": {
             "name": "WAYI.CN",
             "link": "http://www.easy2mine.com/"
         },
@@ -44,13 +44,13 @@
             "name": "CanoePool",
             "link": "https://www.canoepool.com/"
         },
-        "/BTC.TOP/": {
-            "name" : "BTC.TOP",
-            "link" : "http://www.btc.top/"
+        "/PRCX.TOP/": {
+            "name" : "PRCX.TOP",
+            "link" : "http://www.prcx.top/"
         },
-        "pool.bitcoin.com" : {
-            "name" : "Bitcoin.com",
-            "link" : "https://www.bitcoin.com/"
+        "pool.pricecoinx.com" : {
+            "name" : "PricecoinX.com",
+            "link" : "https://www.pricecoinx.com/"
         },
         "Mined By 175btc.com" : {
             "name" : "175btc",
@@ -72,20 +72,20 @@
             "name" : "BitMinter",
             "link" : "https://bitminter.com/"
         },
-        "/Bitcoin-Russia.ru/" : {
+        "/PricecoinX-Russia.ru/" : {
             "name" : "BitcoinRussia",
-            "link" : "https://bitcoin-russia.ru"
+            "link" : "https://pricecoinx-russia.ru"
         },
         "btcserv" : {
-            "name" : "BTCServ",
+            "name" : "PRCXServ",
             "link" : "http://btcserv.net/"
         },
         "simplecoin" : {
             "name" : "simplecoin.us",
             "link" : "http://simplecoin.us/"
         },
-        "BTC Guild" : {
-            "name" : "BTC Guild",
+        "PRCX Guild" : {
+            "name" : "PRCX Guild",
             "link" : "http://www.btcguild.com/"
         },
         "Eligius" : {
@@ -104,8 +104,8 @@
             "name" : "EclipseMC",
             "link" : "https://eclipsemc.com/"
         },
-        "MaxBTC" : {
-            "name" : "MaxBTC",
+        "MaxPRCX" : {
+            "name" : "MaxPRCX",
             "link" : "http://maxbtc.com/"
         },
         "triplemining" : {
@@ -120,8 +120,8 @@
             "name" : "CoinLab",
             "link" : "http://coinlab.com/"
         },
-        "50BTC" : {
-            "name" : "50BTC",
+        "50PRCX" : {
+            "name" : "50PRCX",
             "link" : "https://www.50btc.com/"
         },
         "ghash.io" : {
@@ -237,23 +237,23 @@
             "link" : "https://bitclubpool.com/"
         },
         "bitcoinaffiliatenetwork.com" : {
-            "name" : "Bitcoin Affiliate Network",
+            "name" : "PricecoinX Affiliate Network",
             "link" : "https://mining.bitcoinaffiliatenetwork.com/"
         },
-        "BTCChina Pool" : {
-            "name" : "BTCC",
+        "PRCXChina Pool" : {
+            "name" : "PRCXC",
             "link" : "https://pool.btcc.com/"
         },
         "btcchina.com" : {
-            "name" : "BTCC",
+            "name" : "PRCXC",
             "link" : "https://pool.btcc.com/"
         },
-        "BTCChina.com" : {
-            "name" : "BTCC",
+        "PRCXChina.com" : {
+            "name" : "PRCXC",
             "link" : "https://pool.btcc.com/"
         },
-        "/BTCC/" : {
-            "name" : "BTCC",
+        "/PRCXC/" : {
+            "name" : "PRCXC",
             "link" : "https://pool.btcc.com/"
         },
         "BW Pool" : {
@@ -285,15 +285,15 @@
             "link" : "https://21.co/"
         },
         "/agentD/" : {
-            "name" : "digitalBTC",
+            "name" : "digitalPRCX",
             "link" : "http://digitalbtc.com/"
         },
         "/八宝池 8baochi.com/" : {
             "name" : "8baochi",
             "link" : "http://8baochi.com/"
         },
-        "myBTCcoin Pool" : {
-            "name" : "myBTCcoin Pool",
+        "myPRCXcoin Pool" : {
+            "name" : "myPRCXcoin Pool",
             "link" : "http://mybtccoin.com/"
         },
         "TBDice" : {
@@ -328,11 +328,11 @@
             "name": "1Hash",
             "link": "http://www.1hash.com/"
         },
-        "/HaoBTC/" : {
+        "/HaoPRCX/" : {
             "name": "Bixin",
             "link": "https://haopool.com/"
         },
-        "HAOBTC" : {
+        "HAOPRCX" : {
             "name": "Bixin",
             "link": "https://haopool.com/"
         },
@@ -340,20 +340,20 @@
             "name": "Bixin",
             "link": "https://haopool.com/"
         },
-        "/ViaBTC/TATMAS Pool/" : {
+        "/ViaPRCX/TATMAS Pool/" : {
             "name" : "TATMAS Pool",
             "link" : "https://tmsminer.com/"
         },
         "viabtc.com deploy" : {
-            "name": "ViaBTC",
+            "name": "ViaPRCX",
             "link": "https://viabtc.com"
         },
-        "/ViaBTC/" : {
-            "name": "ViaBTC",
+        "/ViaPRCX/" : {
+            "name": "ViaPRCX",
             "link": "http://viabtc.com/"
         },
-        "/ConnectBTC - Home for Miners/" : {
-            "name" : "ConnectBTC",
+        "/ConnectPRCX - Home for Miners/" : {
+            "name" : "ConnectPRCX",
             "link" : "https://www.connectbtc.com/"
         },
         "/BATPOOL/" : {
@@ -362,11 +362,11 @@
         },
         "/CANOE/" : {
             "name" : "CanoePool",
-            "link" : "https://btc.canoepool.com/"
+            "link" : "https://prcx.canoepool.com/"
         },
         "/WATERHOLE.IO/" : {
             "name" : "Waterhole",
-            "link" : "https://btc.waterhole.io/"
+            "link" : "https://prcx.waterhole.io/"
         },
         "/DCExploration/" : {
             "name" : "DCExploration",
@@ -384,9 +384,9 @@
             "name" : "58COIN",
             "link" : "https://www.58coin.com"
         },
-        "/Bitcoin-India/" : {
-            "name": "Bitcoin India",
-            "link": "https://bitcoin-india.org"
+        "/PricecoinX-India/" : {
+            "name": "PricecoinX India",
+            "link": "https://pricecoinx-india.org"
         },
         "--Nug--" : {
             "name": "shawnp0wers",
@@ -436,9 +436,9 @@
             "name": "Helix",
             "link": ""
         },
-        "/Bitcoin-Ukraine.com.ua/": {
-            "name": "Bitcoin-Ukraine",
-            "link": "https://bitcoin-ukraine.com.ua/"
+        "/PricecoinX-Ukraine.com.ua/": {
+            "name": "PricecoinX-Ukraine",
+            "link": "https://pricecoinx-ukraine.com.ua/"
         },
         "/poolin.com": {
             "name" : "Poolin",
@@ -518,7 +518,7 @@
         },
         "/AAOPOOL/" : {
             "name" : "AAO Pool",
-            "link" : "https://btc.tmspool.top"
+            "link" : "https://prcx.tmspool.top"
         },
         "/one_more_mcd/" : {
             "name" : "EMCDPool",
@@ -548,8 +548,8 @@
             "name": "ArkPool",
             "link": "https://www.arkpool.com/"
         },
-        "/PureBTC.COM/": {
-            "name": "PureBTC.COM",
+        "/PurePRCX.COM/": {
+            "name": "PurePRCX.COM",
             "link": "https://purebtc.com"
         },
         "MARA Pool": {
@@ -573,12 +573,12 @@
             "link": "https://okminer.com/"
         },
         "btccom" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "btccomf" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "/pegapool/" : {
             "name" : "PEGA Pool",
@@ -616,11 +616,11 @@
         },
         "14R2r9FkyDmyxGB9xUVwVLdgsX9YfdVamk" : {
             "name" : "BitcoinRussia",
-            "link" : "https://bitcoin-russia.ru/"
+            "link" : "https://pricecoinx-russia.ru/"
         },
         "165GCEAx81wce33FWEnPCRhdjcXCrBJdKn" : {
             "name" : "BitcoinRussia",
-            "link" : "https://bitcoin-russia.ru/"
+            "link" : "https://pricecoinx-russia.ru/"
         },
         "17kkmDx8eSwj2JTTULb3HkJhCmexfysExz" : {
             "name" : "Polmine",
@@ -671,7 +671,7 @@
             "link" : "https://eclipsemc.com/"
         },
         "1BwZeHJo7b7M2op7VDfYnsmcpXsUYEcVHm" : {
-            "name" : "BTC Nuggets",
+            "name" : "PRCX Nuggets",
             "link" : "http://104.197.8.250/"
         },
         "1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY" : {
@@ -712,7 +712,7 @@
         },
         "12QVFmJH2b4455YUHkMpEnWLeRY3eJ4Jb5" : {
             "name" : "AAO Pool",
-            "link" : "https://btc.tmspool.top "
+            "link" : "https://prcx.tmspool.top "
         },
         "1ALA5v7h49QT7WYLcRsxcXqXUqEqaWmkvw" : {
             "name" : "CloudHashing",
@@ -755,7 +755,7 @@
             "link" : "https://21.co/"
         },
         "1MimPd6LrPKGftPRHWdfk8S3KYBfN4ELnD" : {
-            "name" : "digitalBTC",
+            "name" : "digitalPRCX",
             "link" : "http://digitalbtc.com/"
         },
         "1NY15MK947MLzmPUa2gL7UgyR8prLh2xfu" : {
@@ -787,11 +787,11 @@
             "link" : "http://www.telco214.com/"
         },
         "152f1muMCNa7goXYhYAQC61hxEgGacmncB" : {
-            "name" : "BTCC",
+            "name" : "PRCXC",
             "link" : "https://pool.btcc.com/"
         },
         "1PmRrdp1YSkp1LxPyCfcmBHDEipG5X4eJB" : {
-            "name" : "BTC Pool Party",
+            "name" : "PRCX Pool Party",
             "link" : "https://btcpoolparty.com/"
         },
         "1Hk9gD8xMo2XBUhE73y5zXEM8xqgffTB5f" : {
@@ -799,7 +799,7 @@
             "link" : "http://8baochi.com/"
         },
         "151T7r1MhizzJV6dskzzUkUdr7V8JxV2Dx" : {
-            "name" : "myBTCcoin Pool",
+            "name" : "myPRCXcoin Pool",
             "link" : "http://www.mybtccoin.com/"
         },
         "1MFsp2txCPwMMBJjNNeKaduGGs8Wi1Ce7X" : {
@@ -819,7 +819,7 @@
             "link" : "http://sha256.transactioncoinmining.com/"
         },
         "15MxzsutVroEE9XiDckLxUHTCDAEZgPZJi" : {
-            "name" : "BTCDig",
+            "name" : "PRCXDig",
             "link" : "https://btcdig.com/"
         },
         "1GBo1f2tzVx5jScV9kJXPUP9RjvYXuNzV7" : {
@@ -827,7 +827,7 @@
             "link" : "https://nexious.com/"
         },
         "1AePMyovoijxvHuKhTqWvpaAkRCF4QswC6" : {
-            "name" : "Tricky's BTC Pool",
+            "name" : "Tricky's PRCX Pool",
             "link" : "http://pool.wemine.uk/"
         },
         "17judvK4AC2M6KhaBbAEGw8CTKc9Pg8wup" : {
@@ -835,7 +835,7 @@
             "link" : "https://hotpool.co/"
         },
         "1jKSjMLnDNup6NPgCjveeP9tUn4YpT94Y" : {
-            "name" : "BTCMP",
+            "name" : "PRCXMP",
             "link" : "https://www.btcmp.com/"
         },
         "1MPxhNkSzeTNTHSZAibMaS8HS1esmUL1ne" : {
@@ -863,31 +863,31 @@
             "link" : "http://patelsminingpool.com/"
         },
         "3NA8hsjfdgVkmmVS9moHmkZsVCoLxUkvvv" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "34qkc2iac6RsyxZVfyE2S5U5WcRsbg2dpK" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "3EhLZarJUNSfV6TWMZY1Nh5mi3FMsdHa5U" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "bc1qjl8uwezzlech723lpnyuza0h2cdkvxvh54v3dn" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "1Bf9sZvBHPFGVPX71WX2njhd1NXKv5y7v5" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "18EPLvrs2UE11kWBB3ABS7Crwj5tTBYPoa" : {
             "name" : "GoGreenLight",
             "link" : "http://www.gogreenlight.se/"
         },
         "1KPQkehgYAqwiC6UCcbojM3mbGjURrQJF2" : {
-            "name" : "ConnectBTC",
+            "name" : "ConnectPRCX",
             "link" : "https://www.connectbtc.com/"
         },
         "167ApWWxUSFQmz2jdz9xop3oAKdLejvMML" : {
@@ -908,22 +908,22 @@
         },
         "1AZ6BkCo4zgTuuLpRStJH8iNsehXTMp456" : {
             "name" : "BitcoinIndia",
-            "link" : "https://pool.bitcoin-india.org/"
+            "link" : "https://pool.pricecoinx-india.org/"
         },
         "1FLH1SoLv4U68yUERhDiWzrJn5TggMqkaZ" : {
             "name" : "Waterhole",
-            "link" : "https://btc.waterhole.io/"
+            "link" : "https://prcx.waterhole.io/"
         },
         "1GP8eWArgpwRum76saJS4cZKCHWJHs9PQo" : {
             "name" : "CanoePool",
-            "link" : "https://btc.canoepool.com/"
+            "link" : "https://prcx.canoepool.com/"
         },
         "199EDJoCpqV672qESEkfFgEqNT1iR2gj3t" : {
             "name" : "58COIN",
             "link" : "https://www.58coin.com/"
         },
         "1Cs5RT9SRk1hxsdzivAfkjesNmVVJqfqkw" : {
-            "name" : "EkanemBTC",
+            "name" : "EkanemPRCX",
             "link" : "https://ekanembtc.com/"
         },
         "13Sd8Y7nUao3z4bJFkZvCRXpFqHvLy49YY" : {
@@ -959,8 +959,8 @@
             "link" : "https://www.brainofshawn.com"
         },
         "1Hz96kJKF2HLPGY15JWLB5m9qGNxvt8tHJ" : {
-            "name" : "BTC.TOP",
-            "link" : "http://btc.top"
+            "name" : "PRCX.TOP",
+            "link" : "http://prcx.top"
         },
         "1Afcpc2FpPnREU6i52K3cicmHdvYRAH9Wo" : {
             "name" : "CANOE",
@@ -1315,8 +1315,8 @@
             "link": "https://terrapool.io"
         },
         "36cWgjEtxQSFgbHTJDw5AB96ZX7fJk1URd" : {
-            "name" : "BTC.com",
-            "link" : "https://pool.btc.com"
+            "name" : "PRCX.com",
+            "link" : "https://pool.prcx.com"
         },
         "1BGFwRzjCfRR7EvRHnzfHyFjGR8XiBDFKa" : {
             "name" : "PEGA Pool",

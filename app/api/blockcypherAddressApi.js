@@ -13,8 +13,8 @@ function getAddressDetails(address, scriptPubkey, sort, limit, offset) {
 		}
 
 		var limitOffset = limit + offset;
-		var mainnetUrl = `https://api.blockcypher.com/v1/btc/main/addrs/${address}?limit=${limitOffset}`;
-		var testnetUrl = `https://api.blockcypher.com/v1/btc/test3/addrs/${address}?limit=${limitOffset}`;
+		var mainnetUrl = `https://api.blockcypher.com/v1/prcx/main/addrs/${address}?limit=${limitOffset}`;
+		var testnetUrl = `https://api.blockcypher.com/v1/prcx/test3/addrs/${address}?limit=${limitOffset}`;
 		var url = (global.activeBlockchain == "main") ? mainnetUrl : ((global.activeBlockchain == "test") ? testnetUrl : mainnetUrl);
 
 		var options = {

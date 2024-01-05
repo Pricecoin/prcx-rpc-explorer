@@ -21,8 +21,8 @@ const debugPerfLog = debug("btcexp:actionPerformace");
 const debugAccessLog = debug("btcexp:access");
 
 const configPaths = [
-	path.join(os.homedir(), ".config", "btc-rpc-explorer.env"),
-	path.join("/etc", "btc-rpc-explorer", ".env"),
+	path.join(os.homedir(), ".config", "prcx-rpc-explorer.env"),
+	path.join("/etc", "prcx-rpc-explorer", ".env"),
 	path.join(process.cwd(), ".env"),
 ];
 
@@ -190,13 +190,13 @@ expressApp.use(cookieParser());
 expressApp.disable('x-powered-by');
 
 
-if (process.env.BTCEXP_BASIC_AUTH_PASSWORD) {
+if (process.env.PRCXEXP_BASIC_AUTH_PASSWORD) {
 	// basic http authentication
-	expressApp.use(auth(process.env.BTCEXP_BASIC_AUTH_PASSWORD));
+	expressApp.use(auth(process.env.PRCXEXP_BASIC_AUTH_PASSWORD));
 
-} else if (process.env.BTCEXP_SSO_TOKEN_FILE) {
+} else if (process.env.PRCXEXP_SSO_TOKEN_FILE) {
 	// sso authentication
-	expressApp.use(sso(process.env.BTCEXP_SSO_TOKEN_FILE, process.env.BTCEXP_SSO_LOGIN_REDIRECT_URL));
+	expressApp.use(sso(process.env.PRCXEXP_SSO_TOKEN_FILE, process.env.PRCXEXP_SSO_LOGIN_REDIRECT_URL));
 }
 
 // uncomment after placing your favicon in /public
@@ -336,7 +336,7 @@ function loadMiningPoolConfigs() {
 
 async function getSourcecodeProjectMetadata() {
 	var options = {
-		url: "https://api.github.com/repos/janoside/btc-rpc-explorer",
+		url: "https://api.github.com/repos/janoside/prcx-rpc-explorer",
 		headers: {
 			'User-Agent': 'request'
 		}
@@ -497,7 +497,7 @@ async function onRpcConnectionVerified(getnetworkinfo, getblockchaininfo) {
 		// short-circuit: force all RPC calls to pass their version checks - this will likely lead to errors / instability / unexpected results
 		global.btcNodeSemver = "1000.1000.0"
 
-		debugErrorLog(`Unable to parse node version string: ${getnetworkinfo.subversion} - RPC versioning will likely be unreliable. Is your node a version of Bitcoin Core?`);
+		debugErrorLog(`Unable to parse node version string: ${getnetworkinfo.subversion} - RPC versioning will likely be unreliable. Is your node a version of PricecoinX Core?`);
 	}
 	
 	debugLog(`RPC Connected: version=${getnetworkinfo.version} subversion=${getnetworkinfo.subversion}, parsedVersion(used for RPC versioning)=${global.btcNodeSemver}, protocolversion=${getnetworkinfo.protocolversion}, chain=${getblockchaininfo.chain}, services=${services}`);
@@ -750,7 +750,7 @@ expressApp.onStartup = async () => {
 	global.coinConfig = coins[config.coin];
 	global.coinConfigs = coins;
 
-	global.SATS_PER_BTC = global.coinConfig.baseCurrencyUnit.multiplier;
+	global.SATS_PER_PRCX = global.coinConfig.baseCurrencyUnit.multiplier;
 
 	global.specialTransactions = {};
 	global.specialBlocks = {};
@@ -952,7 +952,7 @@ expressApp.continueStartup = function() {
 	if (config.addressApi) {
 		let supportedAddressApis = addressApi.getSupportedAddressApis();
 		if (!supportedAddressApis.includes(config.addressApi)) {
-			utils.logError("32907ghsd0ge", `Unrecognized value for BTCEXP_ADDRESS_API: '${config.addressApi}'. Valid options are: ${supportedAddressApis}`);
+			utils.logError("32907ghsd0ge", `Unrecognized value for PRCXEXP_ADDRESS_API: '${config.addressApi}'. Valid options are: ${supportedAddressApis}`);
 		}
 
 		if (config.addressApi == "electrum" || config.addressApi == "electrumx") {
@@ -964,7 +964,7 @@ expressApp.continueStartup = function() {
 					utils.logError("31207ugf4e0fed", err, {electrumServers:config.electrumServers});
 				});
 			} else {
-				utils.logError("327hs0gde", "You must set the 'BTCEXP_ELECTRUM_SERVERS' environment variable when BTCEXP_ADDRESS_API=electrum.");
+				utils.logError("327hs0gde", "You must set the 'PRCXEXP_ELECTRUM_SERVERS' environment variable when PRCXEXP_ADDRESS_API=electrum.");
 			}
 		}
 	}

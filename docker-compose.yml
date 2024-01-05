@@ -6,23 +6,23 @@ networks:
 
 services:
   explorer:
-    container_name: btc-rpc-explorer
+    container_name: prcx-rpc-explorer
     #define $UID, $GID in .env file the user to run docker and write in data folder
     #user: "1000:1000"
     environment:
-      BTCEXP_HOST: 0.0.0.0
-      BTCEXP_BITCOIND_URI: $BTCEXP_BITCOIND_URI
-      BTCEXP_ADDRESS_API: $BTCEXP_ADDRESS_API
-      BTCEXP_ELECTRUM_SERVERS: $BTCEXP_ELECTRUM_SERVERS
-      BTCEXP_SLOW_DEVICE_MODE: false
-      #More information mode, including Bitcoin exchange rates
+      PRCXEXP_HOST: 0.0.0.0
+      PRCXEXP_PRICECOINXD_URI: $PRCXEXP_PRICECOINXD_URI
+      PRCXEXP_ADDRESS_API: $PRCXEXP_ADDRESS_API
+      PRCXEXP_ELECTRUM_SERVERS: $PRCXEXP_ELECTRUM_SERVERS
+      PRCXEXP_SLOW_DEVICE_MODE: false
+      #More information mode, including PricecoinX exchange rates
       #More privacy mode, no external queries
-      # BTCEXP_PRIVACY_MODE: true
-      # BTCEXP_NO_RATES: true
-      # BTCEXP_UI_THEME: dark
+      # PRCXEXP_PRIVACY_MODE: true
+      # PRCXEXP_NO_RATES: true
+      # PRCXEXP_UI_THEME: dark
     build:
       context: ./
-    image: btc-rpc-explorer:latest
+    image: prcx-rpc-explorer:latest
     #restart: "no"
     ports:
       - "3002:3002"

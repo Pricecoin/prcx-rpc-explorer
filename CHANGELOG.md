@@ -17,14 +17,14 @@
 	* Show "Next Block" fullness
 	* Progress bar for difficulty adjustment estimate
 	* Include median fee rate for next-block estimates (also on [/next-block](./next-block))
-	* Show a banner if 'today' is a Bitcoin 'Holiday' (see more below)
-* Minor fixes for running against Bitcoin Core v23
+	* Show a banner if 'today' is a PricecoinX 'Holiday' (see more below)
+* Minor fixes for running against PricecoinX Core v23
 * Block Analysis: include top "days destroyed" transactions
 * URL change: /mining-template -> /next-block (redirect is included for compatibility)
 * On Extended PubKey pages, include balance data for various address (if Electrum server is configured)
 * New [/next-halving](./next-halving) tool
 * Several new API actions/changes; see [/api/changelog](./api/changelog)
-* New [/holidays](./holidays), a curated list of Bitcoin 'Holidays'
+* New [/holidays](./holidays), a curated list of PricecoinX 'Holidays'
 * Support for different view options on [/fun](./fun)
 * On [/difficulty-history](./difficulty-history), make delta graph honor timespan filtering
 * Proper use of production-ready MemoryStore for session data
@@ -62,10 +62,10 @@
 	* Caching for [/difficulty-history](./difficulty-history) data
 * Unicode formatting for OP_RETURN and other similar data (with ascii+hex accessible via toggle)
 * New `.env` options for setting defaults (see `.env-sample` for details):
-	* BTCEXP_DISPLAY_CURRENCY (btc,sat,local)
-	* BTCEXP_LOCAL_CURRENCY (usd,eur,gbp)
-	* BTCEXP_UI_TIMEZONE (utc,local)
-	* BTCEXP_UI_HIDE_INFO_PANELS (true,false)
+	* PRCXEXP_DISPLAY_CURRENCY (prcx,sat,local)
+	* PRCXEXP_LOCAL_CURRENCY (usd,eur,gbp)
+	* PRCXEXP_UI_TIMEZONE (utc,local)
+	* PRCXEXP_UI_HIDE_INFO_PANELS (true,false)
 * Support for displaying timestamps in local timezone (by using browser default, or setting a manual offset)
 * Cleanup treatment of `locktime` on transaction details pages
 * Unique favicon color based on the active network (mainnet=orange, testnet=green, signet=magenta, regtest=gray)
@@ -92,10 +92,10 @@
 * Better support for BIP9 soft forks shown on [/node-details](./node-details) (e.g. Taproot ST in 0.21.1) (Thanks [@Pantamis](https://github.com/Pantamis))
 * New "Recent" and "Favorites" sections on [/rpc-browser](./rpc-browser)
 * Block lists: show (min, avg, max) fee rates instead of just avg
-* Random Bitcoin-related quote shown in footer on each page load
-* New [/quotes](./quotes), curated list of Bitcoin-related quotes (each quote also having its own page like [this](`./quote/0`))
+* Random PricecoinX-related quote shown in footer on each page load
+* New [/quotes](./quotes), curated list of PricecoinX-related quotes (each quote also having its own page like [this](`./quote/0`))
 * Preemptive support for upcoming format change to `getrawtransaction` output (thanks [@xanoni](https://github.com/xanoni))
-* Fix for incorrect homepage block count when using `BTCEXP_UI_HOME_PAGE_LATEST_BLOCKS_COUNT`
+* Fix for incorrect homepage block count when using `PRCXEXP_UI_HOME_PAGE_LATEST_BLOCKS_COUNT`
 * Fix for inaccurate difficulty adjustment estimates
 * Link to Tor v3 Hidden Service in footer
 * Fix for `DEBUG` environment variable being ignored
@@ -119,10 +119,10 @@
 ##### v3.1.0
 ###### 2021-04-14
 
-* Improvements to no-`txindex` support: now available for all versions of Bitcoin Core
+* Improvements to no-`txindex` support: now available for all versions of PricecoinX Core
 * Move public sites to [BitcoinExplorer.org](https://bitcoinexplorer.org) (BIG thanks [@SatoshisDomains](https://twitter.com/SatoshisDomains))
 * Add back the [/peers](./peers) tool in the "Tools" menu
-	* Note: The map on the peers tool now requires users set their own `BTCEXP_MAPBOX_APIKEY` in `.env`
+	* Note: The map on the peers tool now requires users set their own `PRCXEXP_MAPBOX_APIKEY` in `.env`
 * Response compression
 * Remove reference to unused `fonts.css`
 * Increased static-files cache: 1hr -> 1mo
@@ -145,7 +145,7 @@
 	* Redesigned Dark Mode (now the default)
 	* New app icon
 * Support for pruned nodes and nodes with disabled `txindex`! (HUGE Thanks to [@shesek](https://github.com/shesek))
-	* Note: Currently only Bitcoin Core versions 0.21+ are able to support this feature (a future improvement is planned to make it available to all versions)
+	* Note: Currently only PricecoinX Core versions 0.21+ are able to support this feature (a future improvement is planned to make it available to all versions)
 * Mempool Summary improvements
 	* Greatly improved performance for multiple loads via caching
 	* Added: "Blocks Count" column by fee-rate bucket
@@ -153,7 +153,7 @@
 * Mining Summary: added doughnut chart for rev. breakdown, simplified table data
 * Upgraded to Bootstrap 5 (currently beta3...)
 * Update mapbox API (Thanks [@shesek](https://github.com/tyzbit))
-	* Note: The map on the [/peers](./peers) page now requires that users set the env var `BTCEXP_MAPBOX_APIKEY` to their own API key
+	* Note: The map on the [/peers](./peers) page now requires that users set the env var `PRCXEXP_MAPBOX_APIKEY` to their own API key
 * Fix for 404 pages hanging (Thanks [@shesek](https://github.com/shesek))
 * Add convenience redirect for baseUrl (Thanks [@shesek](https://github.com/shesek))
 * Make url in logs clickable (Thanks [@shesek](https://github.com/shesek))
@@ -167,8 +167,8 @@
 	* `/unconfirmed-tx` -> `/mempool-transactions`
 * Environment variable changes
 	* The below changes were made to more clearly acknowledge that multiple Electrum-protocol implementations (e.g. ElectrumX, Electrs) can be used for address queries:
-	* `BTCEXP_ADDRESS_API` value `electrumx` -> `electrum` (`electrumx` should still works)
-	* `BTCEXP_ELECTRUMX_SERVERS` -> `BTCEXP_ELECTRUM_SERVERS` (`BTCEXP_ELECTRUMX_SERVERS` should still work)
+	* `PRCXEXP_ADDRESS_API` value `electrumx` -> `electrum` (`electrumx` should still works)
+	* `PRCXEXP_ELECTRUMX_SERVERS` -> `PRCXEXP_ELECTRUM_SERVERS` (`PRCXEXP_ELECTRUMX_SERVERS` should still work)
 * Updated dependencies
 	* jQuery: v3.4.1 -> v3.6.0
 	* highlight.js: v9.14.2 -> v10.7.1
@@ -180,7 +180,7 @@
 
 * New "Fun" item for the tx containing the whitepaper and new tool to extract the whitepaper and display it
 * New fee rate data on `/block-analysis` pages
-* New minor misc peer data available in Bitcoin Core RPC v0.21+
+* New minor misc peer data available in PricecoinX Core RPC v0.21+
 * New gold exchange rate on homepage
 * Fix for SSO token generation URL encoding (Thanks [@shesek](https://github.com/shesek) and [@Kixunil](https://github.com/Kixunil))
 * Fix for [/peers](./peers) map
@@ -241,7 +241,7 @@
 	* Fee estimates (estimatesmartfee) for 1, 6, 144, 1008 blocks
 	* Hashrate estimate for 1+7 days
 	* New item for 'Chain Rewrite Days', using 7day hashrate
-	* New data based on UTXO-set summary. Note that UTXO-set querying is resource intensive and therefore disabled by default to protect slower nodes. Set `BTCEXP_SLOW_DEVICE_MODE` to `false` in your `.env` file to enjoy associated features:
+	* New data based on UTXO-set summary. Note that UTXO-set querying is resource intensive and therefore disabled by default to protect slower nodes. Set `PRCXEXP_SLOW_DEVICE_MODE` to `false` in your `.env` file to enjoy associated features:
 		* UTXO-set size
 		* Total coins in circulation
 		* Market cap
@@ -284,7 +284,7 @@
 * Start of RPC API versioning support
 * Tweaked styling across site
 * Homepage UI tweaks
-	* Remove "Bitcoin Explorer" H1 (it's redundant)
+	* Remove "PricecoinX Explorer" H1 (it's redundant)
 	* Hide the "Date" (timestamp) column for recent blocks (the Age+TTM is more valuable)
 * Updated miner configs
 * Lots of minor bug fixes

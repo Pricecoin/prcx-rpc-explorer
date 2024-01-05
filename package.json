@@ -1,7 +1,7 @@
 {
-	"name": "btc-rpc-explorer",
+	"name": "prcx-rpc-explorer",
 	"version": "3.4.0",
-	"description": "Open-source, self-hosted Bitcoin explorer",
+	"description": "Open-source, self-hosted PricecoinX explorer",
 	"private": false,
 	"bin": "bin/cli.js",
 	"scripts": {
@@ -24,15 +24,15 @@
 		"css": "npm-run-all css-light css-dark css-dark-v1 integrity"
 	},
 	"keywords": [
-		"bitcoin",
-		"btc",
+		"pricecoinx",
+		"prcx",
 		"blockchain"
 	],
 	"author": "Dan Janosik <dan@47.io>",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/janoside/btc-rpc-explorer.git"
+		"url": "git+https://github.com/janoside/prcx-rpc-explorer.git"
 	},
 	"dependencies": {
 		"@janoside/app-utils": "github:janoside/app-utils#ba4c23d3f",

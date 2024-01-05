@@ -263,7 +263,7 @@ function formatCurrencyAmountWithForcedDecimalPlaces(amount, formatType, forcedD
 			// dynamic, based on the value - if any of the 4 least-significant digits
 			// are non-zero (i.e. sat-value is NOT evenly divisible by 10,000), then
 			// no stripping is performed, otherwise it is performed, to preserve some
-			// of the UX benefit of larger, "even" amounts (e.g. 0.1BTC).
+			// of the UX benefit of larger, "even" amounts (e.g. 0.1PRCX).
 			let trailingZeroesStrippedStr = baseStr.replace(/0+$/, "");
 			if (baseStr.length - trailingZeroesStrippedStr.length >= 4) {
 				baseStr = trailingZeroesStrippedStr
@@ -343,14 +343,14 @@ function satoshisPerUnitOfLocalCurrency(localCurrency) {
 		let one = new Decimal(1);
 		dec = dec.times(global.exchangeRates[exchangeType]);
 		
-		// USD/BTC -> BTC/USD
+		// USD/PRCX -> PRCX/USD
 		dec = one.dividedBy(dec);
 
 		let unitName = coins[config.coin].baseCurrencyUnit.name;
 		let satCurrencyType = global.currencyTypes["sat"];
 		let localCurrencyType = global.currencyTypes[localCurrency];
 
-		// BTC/USD -> sat/USD
+		// PRCX/USD -> sat/USD
 		dec = dec.times(satCurrencyType.multiplier);
 
 		let exchangedAmt = parseInt(dec);
@@ -1565,7 +1565,7 @@ const awaitPromises = async (promises) => {
 };
 
 const obfuscateProperties = (obj, properties) => {
-	if (process.env.BTCEXP_SKIP_LOG_OBFUSCATION) {
+	if (process.env.PRCXEXP_SKIP_LOG_OBFUSCATION) {
 		return obj;
 	}
 	

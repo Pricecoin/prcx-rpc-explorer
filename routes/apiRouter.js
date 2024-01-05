@@ -168,7 +168,7 @@ router.get("/tx/:txid", asyncHandler(async (req, res, next) => {
 
 		outJson.fee = {
 			"amount": (inputBtc - outputBtc) / global.coinConfig.baseCurrencyUnit.multiplier,
-			"unit": "BTC"
+			"unit": "PRCX"
 		};
 
 		if (outJson.confirmations == null) {
@@ -915,7 +915,7 @@ router.get("/price/sats", function(req, res, next) {
 
 	if (!global.exchangeRates) {
 		result.success = false;
-		result.error = "You have exchange-rate requests disabled (this is the default state; in your server configuration, you must set BTCEXP_NO_RATES to 'false', and ensure that BTCEXP_PRIVACY_MODE is also still its default value of 'false')"
+		result.error = "You have exchange-rate requests disabled (this is the default state; in your server configuration, you must set PRCXEXP_NO_RATES to 'false', and ensure that PRCXEXP_PRIVACY_MODE is also still its default value of 'false')"
 	}
 
 	supportedCurrencies.forEach(currency => {
@@ -945,7 +945,7 @@ router.get("/price/marketcap", function(req, res, next) {
 
 	if (!global.exchangeRates) {
 		result.success = false;
-		result.error = "You have exchange-rate requests disabled (this is the default state; in your server configuration, you must set BTCEXP_NO_RATES to 'false', and ensure that BTCEXP_PRIVACY_MODE is also still its default value of 'false')"
+		result.error = "You have exchange-rate requests disabled (this is the default state; in your server configuration, you must set PRCXEXP_NO_RATES to 'false', and ensure that PRCXEXP_PRIVACY_MODE is also still its default value of 'false')"
 	}
 	
 	coreApi.getBlockchainInfo().then(function(getblockchaininfo){
@@ -984,7 +984,7 @@ router.get("/price", function(req, res, next) {
 
 	if (!global.exchangeRates) {
 		result.success = false;
-		result.error = "You have exchange-rate requests disabled (this is the default state; in your server configuration, you must set BTCEXP_NO_RATES to 'false', and ensure that BTCEXP_PRIVACY_MODE is also still its default value of 'false')"
+		result.error = "You have exchange-rate requests disabled (this is the default state; in your server configuration, you must set PRCXEXP_NO_RATES to 'false', and ensure that PRCXEXP_PRIVACY_MODE is also still its default value of 'false')"
 	}
 	
 	supportedCurrencies.forEach(currency => {

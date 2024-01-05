@@ -60,8 +60,8 @@ const currencyUnits = [
 ];
 
 module.exports = {
-	name:"Bitcoin",
-	ticker:"BTC",
+	name:"PricecoinX",
+	ticker:"PRCX",
 	logoUrlsByNetwork:{
 		"main":"./img/network-mainnet/logo.svg",
 		"test":"./img/network-testnet/logo.svg",
@@ -81,7 +81,7 @@ module.exports = {
 		"regtest": "#777"
 	},
 	siteTitlesByNetwork: {
-		"main":"Bitcoin Explorer",
+		"main":"PricecoinX Explorer",
 		"test":"Testnet Explorer",
 		"regtest":"Regtest Explorer",
 		"signet":"Signet Explorer",
@@ -97,18 +97,18 @@ module.exports = {
 		signet: "39332e10af6fe491e8ae4ba1e2dd674698fedf8aa3c8c42bf71572debc1bb5b9"
 	},
 	miningPoolsConfigUrls:[
-		"https://raw.githubusercontent.com/btc21/Bitcoin-Known-Miners/master/miners.json",
-		"https://raw.githubusercontent.com/bitcoin-data/mining-pools/generated/pools.json",
+		"https://raw.githubusercontent.com/btc21/PricecoinX-Known-Miners/master/miners.json",
+		"https://raw.githubusercontent.com/pricecoinx-data/mining-pools/generated/pools.json",
 		"https://raw.githubusercontent.com/btccom/Blockchain-Known-Pools/master/pools.json",
 		"https://raw.githubusercontent.com/blockchain/Blockchain-Known-Pools/master/pools.json"
 	],
 	maxBlockWeight: 4000000,
 	maxBlockSize: 1000000,
-	minTxBytes: 166, // ref: https://en.bitcoin.it/wiki/Maximum_transaction_rate
+	minTxBytes: 166, // ref: https://en.pricecoinx.it/wiki/Maximum_transaction_rate
 	minTxWeight: 166 * 4, // hack
 	difficultyAdjustmentBlockCount: 2016,
 	maxSupplyByNetwork: {
-		"main": new Decimal(20999817.31308491), // ref: https://bitcoin.stackexchange.com/a/38998
+		"main": new Decimal(20999817.31308491), // ref: https://pricecoinx.stackexchange.com/a/38998
 		"test": new Decimal(21000000),
 		"regtest": new Decimal(21000000),
 		"signet": new Decimal(21000000)
@@ -116,7 +116,7 @@ module.exports = {
 	targetBlockTimeSeconds: 600,
 	targetBlockTimeMinutes: 10,
 	currencyUnits:currencyUnits,
-	currencyUnitsByName:{"BTC":currencyUnits[0], "mBTC":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
+	currencyUnitsByName:{"PRCX":currencyUnits[0], "mPRCX":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
 	baseCurrencyUnit:currencyUnits[3],
 	defaultCurrencyUnit:currencyUnits[0],
 	feeSatoshiPerByteBucketMaxima: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 50, 75, 100, 150],

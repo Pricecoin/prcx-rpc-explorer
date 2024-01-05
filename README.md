@@ -1,6 +1,6 @@
-# BTC RPC Explorer
+# PRCX RPC Explorer
 
-## Self-Hosted Bitcoin explorer for everyone running [Bitcoin Core](https://github.com/bitcoin/bitcoin).
+## Self-Hosted PricecoinX explorer for everyone running [PricecoinX Core](https://github.com/pricecoinx/pricecoinx).
 
 [![npm version][npm-ver-img]][npm-ver-url] [![NPM downloads][npm-dl-alltime-img]][npm-dl-url]
 
@@ -12,7 +12,7 @@
 
 
 
-This is a self-hosted explorer for the Bitcoin blockchain, driven by RPC calls to your own [Bitcoin](https://github.com/bitcoin/bitcoin) node. It is easy to run and can be connected to other tools (like Electrum servers) to achieve a full-featured explorer.
+This is a self-hosted explorer for the PricecoinX blockchain, driven by RPC calls to your own [PricecoinX](https://github.com/pricecoinx/pricecoinx) node. It is easy to run and can be connected to other tools (like Electrum servers) to achieve a full-featured explorer.
 
 Whatever reasons you may have for running a full node (trustlessness, technical curiosity, supporting the network, etc) it's valuable to appreciate the *fullness* of your node. With this explorer, you can explore not just the blockchain database, but also explore all of the functional capabilities of your own node.
 
@@ -43,14 +43,14 @@ See [CHANGELOG.md](/CHANGELOG.md).
 
 ## Prerequisites
 
-1. Install `Bitcoin Core` - [instructions](https://bitcoin.org/en/full-node). Ensure that `Bitcoin Core`'s' RPC server is enabled (`server=1`).
-2. Allow `Bitcoin Core` to synchronize with the Bitcoin network (you *can* use this tool while sychronizing, but some pages may fail).
+1. Install `PricecoinX Core` - [instructions](https://pricecoinx.org/en/full-node). Ensure that `PricecoinX Core`'s' RPC server is enabled (`server=1`).
+2. Allow `PricecoinX Core` to synchronize with the PricecoinX network (you *can* use this tool while sychronizing, but some pages may fail).
 3. Install Node.js (16+ required, 18+ recommended).
 
 ### Note about pruning and indexing configurations
 
 This tool is designed to work best with full transaction indexing enabled (`txindex=1`) and pruning **disabled**. 
-However, if you're running Bitcoin Core v0.21+ you can run *without* `txindex` enabled and/or *with* `pruning` enabled and this tool will continue to function, but some data will be incomplete or missing. Also note that such Bitcoin Core configurations receive less thorough testing.
+However, if you're running PricecoinX Core v0.21+ you can run *without* `txindex` enabled and/or *with* `pruning` enabled and this tool will continue to function, but some data will be incomplete or missing. Also note that such PricecoinX Core configurations receive less thorough testing.
 
 In particular, with `pruning` enabled and/or `txindex` disabled, the following functionality is altered:
 
@@ -69,26 +69,26 @@ If you're running on mainnet with the default datadir and port, the default conf
 *Note: npm v7+ is required*
 
 ```bash
-npm install -g btc-rpc-explorer
-btc-rpc-explorer
+npm install -g prcx-rpc-explorer
+prcx-rpc-explorer
 ```
 
 #### Run from source:
 
-1. `git clone https://github.com/janoside/btc-rpc-explorer`
-2. `cd btc-rpc-explorer`
+1. `git clone https://github.com/janoside/prcx-rpc-explorer`
+2. `cd prcx-rpc-explorer`
 3. `npm install`
 4. `npm start`
 
 
 #### Install via AUR Arch Linux:
 
-###### Note: The below AUR package was created and is maintained by [@dougEfresh](https://github.com/dougEfresh). The details and history of the package can be seen [here](https://aur.archlinux.org/packages/btc-rpc-explorer/).
+###### Note: The below AUR package was created and is maintained by [@dougEfresh](https://github.com/dougEfresh). The details and history of the package can be seen [here](https://aur.archlinux.org/packages/prcx-rpc-explorer/).
 
-1. `git clone https://aur.archlinux.org/btc-rpc-explorer.git`
-2. `cd btc-rpc-explorer`
+1. `git clone https://aur.archlinux.org/prcx-rpc-explorer.git`
+2. `cd prcx-rpc-explorer`
 3. `makepkg -csi`
-4. `systemctl enable --now btc-rpc-explorer`
+4. `systemctl enable --now prcx-rpc-explorer`
 
 
 
@@ -103,46 +103,46 @@ Configuration options may be set via environment variables or CLI arguments.
 
 To configure with environment variables, you need to create one of the 2 following files and enter values in it:
 
-1. `~/.config/btc-rpc-explorer.env`
-2. `.env` in the working directory for btc-rpc-explorer
+1. `~/.config/prcx-rpc-explorer.env`
+2. `.env` in the working directory for prcx-rpc-explorer
 
 In either case, refer to [.env-sample](.env-sample) for a list of the options and formatting details.
 
 #### Configuration with CLI args
 
-For configuring with CLI arguments, run `btc-rpc-explorer --help` for the full list of options. An example execution is:
+For configuring with CLI arguments, run `prcx-rpc-explorer --help` for the full list of options. An example execution is:
 
 ```bash
-btc-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
+prcx-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.pricecoinx/regtest/.cookie
 ```
 
 #### Demo site settings
 
 To match the features visible on the demo site at [BitcoinExplorer.org](https://bitcoinexplorer.org) you'll need to set the following non-default configuration values:
 
-    BTCEXP_DEMO=true 		# enables some demo/informational aspects of the site
-    BTCEXP_NO_RATES=false		# enables querying of exchange rate data
-    BTCEXP_SLOW_DEVICE_MODE=false	# enables resource-intensive tasks (UTXO set query, 24hr volume querying) that are inappropriate for "slow" devices
-    BTCEXP_ADDRESS_API=electrum 	# use electrum-protocol servers for address lookups
-    BTCEXP_ELECTRUM_SERVERS=tcp://your-electrum-protocol-server-host:50001		# address(es) for my electrum-protocol server(s)
-    BTCEXP_IPSTACK_APIKEY=your-api-key		# enable peer ip geo-location
-    BTCEXP_MAPBOX_APIKEY=your-api-key		# enable map of peer locations
+    PRCXEXP_DEMO=true 		# enables some demo/informational aspects of the site
+    PRCXEXP_NO_RATES=false		# enables querying of exchange rate data
+    PRCXEXP_SLOW_DEVICE_MODE=false	# enables resource-intensive tasks (UTXO set query, 24hr volume querying) that are inappropriate for "slow" devices
+    PRCXEXP_ADDRESS_API=electrum 	# use electrum-protocol servers for address lookups
+    PRCXEXP_ELECTRUM_SERVERS=tcp://your-electrum-protocol-server-host:50001		# address(es) for my electrum-protocol server(s)
+    PRCXEXP_IPSTACK_APIKEY=your-api-key		# enable peer ip geo-location
+    PRCXEXP_MAPBOX_APIKEY=your-api-key		# enable map of peer locations
 
 #### SSO authentication
 
 You can configure SSO authentication similar to what ThunderHub and RTL provide.
-To enable it, make sure `BTCEXP_BASIC_AUTH_PASSWORD` is **not** set and set `BTCEXP_SSO_TOKEN_FILE` to point to a file write-accessible by btc-rpc-explorer.
-Then to access btc-rpc-explorer, your SSO provider needs to read the token from this file and set it in URL parameter `token`.
+To enable it, make sure `PRCXEXP_BASIC_AUTH_PASSWORD` is **not** set and set `PRCXEXP_SSO_TOKEN_FILE` to point to a file write-accessible by prcx-rpc-explorer.
+Then to access prcx-rpc-explorer, your SSO provider needs to read the token from this file and set it in URL parameter `token`.
 For security reasons the token changes with each login, so the SSO provider needs to read it each time!
 
 After successful access with the token, a cookie is set for authentication, so you don't need to worry about it anymore.
-To improve user experience you can set `BTCEXP_SSO_LOGIN_REDIRECT_URL` to the URL of your SSO provider.
+To improve user experience you can set `PRCXEXP_SSO_LOGIN_REDIRECT_URL` to the URL of your SSO provider.
 This will cause users to be redirected to your login page if needed.
 
 ## Run via Docker
 
-1. `docker build -t btc-rpc-explorer .`
-2. `docker run -it -p 3002:3002 -e BTCEXP_HOST=0.0.0.0 btc-rpc-explorer`
+1. `docker build -t prcx-rpc-explorer .`
+2. `docker run -it -p 3002:3002 -e PRCXEXP_HOST=0.0.0.0 prcx-rpc-explorer`
 
 
 ## Reverse proxy with HTTPS
@@ -154,7 +154,7 @@ See [instructions here](docs/nginx-reverse-proxy.md) for using nginx+certbot (le
 
 If you get value from this project, please consider supporting my work with a donation. All donations are truly appreciated.
 
-Donate via BTC Pay Server:
+Donate via PRCX Pay Server:
 
 * [https://donate.bitcoinexplorer.org](https://donate.bitcoinexplorer.org)
 
@@ -163,13 +163,13 @@ Or, via a lightning address:
 thanks@donate.btc21.org
 
 
-[npm-ver-img]: https://img.shields.io/npm/v/btc-rpc-explorer.svg?style=flat
-[npm-ver-url]: https://www.npmjs.com/package/btc-rpc-explorer
-[npm-dl-img]: http://img.shields.io/npm/dm/btc-rpc-explorer.svg?style=flat
-[npm-dl-url]: https://npmcharts.com/compare/btc-rpc-explorer?minimal=true
+[npm-ver-img]: https://img.shields.io/npm/v/prcx-rpc-explorer.svg?style=flat
+[npm-ver-url]: https://www.npmjs.com/package/prcx-rpc-explorer
+[npm-dl-img]: http://img.shields.io/npm/dm/prcx-rpc-explorer.svg?style=flat
+[npm-dl-url]: https://npmcharts.com/compare/prcx-rpc-explorer?minimal=true
 
-[npm-dl-weekly-img]: https://badgen.net/npm/dw/btc-rpc-explorer?icon=npm&cache=300
-[npm-dl-monthly-img]: https://badgen.net/npm/dm/btc-rpc-explorer?icon=npm&cache=300
-[npm-dl-yearly-img]: https://badgen.net/npm/dy/btc-rpc-explorer?icon=npm&cache=300
-[npm-dl-alltime-img]: https://badgen.net/npm/dt/btc-rpc-explorer?icon=npm&cache=300&label=total%20downloads
+[npm-dl-weekly-img]: https://badgen.net/npm/dw/prcx-rpc-explorer?icon=npm&cache=300
+[npm-dl-monthly-img]: https://badgen.net/npm/dm/prcx-rpc-explorer?icon=npm&cache=300
+[npm-dl-yearly-img]: https://badgen.net/npm/dy/prcx-rpc-explorer?icon=npm&cache=300
+[npm-dl-alltime-img]: https://badgen.net/npm/dt/prcx-rpc-explorer?icon=npm&cache=300&label=total%20downloads
 

@@ -121,7 +121,7 @@ if (redisCache.active) {
 	}
 
 	// md5 of the active RPC credentials serves as part of the key; this enables
-	// multiple instances of btc-rpc-explorer (eg mainnet + testnet) to share
+	// multiple instances of prcx-rpc-explorer (eg mainnet + testnet) to share
 	// a single redis instance peacefully
 	const rpcHostPort = `${config.credentials.rpc.host}:${config.credentials.rpc.port}`;
 	const rpcCredKeyComponent = md5(JSON.stringify(config.credentials.rpc)).substring(0, 8);
@@ -425,7 +425,7 @@ async function getNextBlockEstimate() {
 
 	const subsidy = coinConfig.blockRewardFunction(blockTemplate.height, global.activeBlockchain);
 
-	const totalFees = new Decimal(blockTemplate.coinbasevalue).dividedBy(SATS_PER_BTC).minus(new Decimal(subsidy));
+	const totalFees = new Decimal(blockTemplate.coinbasevalue).dividedBy(SATS_PER_PRCX).minus(new Decimal(subsidy));
 
 	return {
 		blockTemplate: blockTemplate,
@@ -1473,7 +1473,7 @@ function getMempoolTxSummaries(allTxids, statusId, statusFunc) {
 			const txidKeysForCachePurge = {};
 
 			const btcToSat = (btcFloat) => {
-				return parseInt(new Decimal(btcFloat).times(SATS_PER_BTC).toDP(0));
+				return parseInt(new Decimal(btcFloat).times(SATS_PER_PRCX).toDP(0));
 			};
 
 			for (let i = 0; i < txids.length; i++) {
@@ -1781,15 +1781,15 @@ function buildMempoolSummary(statusId, ageBuckets, sizeBuckets, statusFunc) {
 				let fee = txMempoolInfo.f;
 				let size = txMempoolInfo.w / 4;
 				let weight = txMempoolInfo.w;
-				let feePerByte = new Decimal(txMempoolInfo.f).dividedBy(SATS_PER_BTC).toNumber() / weight;
-				let satoshiPerByte = feePerByte * SATS_PER_BTC;
+				let feePerByte = new Decimal(txMempoolInfo.f).dividedBy(SATS_PER_PRCX).toNumber() / weight;
+				let satoshiPerByte = feePerByte * SATS_PER_PRCX;
 				let age = Date.now() / 1000 - txMempoolInfo.t;
 
 				let addedToBucket = false;
 				for (let i = 0; i < satoshiPerByteBuckets.length; i++) {
 					if (satoshiPerByteBuckets[i].maxFeeRate > satoshiPerByte) {
 						satoshiPerByteBuckets[i]["count"]++;
-						satoshiPerByteBuckets[i]["totalFees"] = satoshiPerByteBuckets[i]["totalFees"].plus(new Decimal(fee).dividedBy(SATS_PER_BTC));
+						satoshiPerByteBuckets[i]["totalFees"] = satoshiPerByteBuckets[i]["totalFees"].plus(new Decimal(fee).dividedBy(SATS_PER_PRCX));
 						satoshiPerByteBuckets[i]["totalBytes"] += size;
 						satoshiPerByteBuckets[i]["totalWeight"] += weight;
 
@@ -1801,13 +1801,13 @@ function buildMempoolSummary(statusId, ageBuckets, sizeBuckets, statusFunc) {
 
 				if (!addedToBucket) {
 					satoshiPerByteBuckets[bucketCount - 2]["count"]++;
-					satoshiPerByteBuckets[bucketCount - 2]["totalFees"] = satoshiPerByteBuckets[bucketCount - 2]["totalFees"].plus(new Decimal(fee).dividedBy(SATS_PER_BTC));
+					satoshiPerByteBuckets[bucketCount - 2]["totalFees"] = satoshiPerByteBuckets[bucketCount - 2]["totalFees"].plus(new Decimal(fee).dividedBy(SATS_PER_PRCX));
 					satoshiPerByteBuckets[bucketCount - 2]["totalBytes"] += size;
 					satoshiPerByteBuckets[bucketCount - 2]["totalWeight"] += weight;
 				}
 
 				summary["count"]++;
-				summary["totalFees"] = summary.totalFees.plus(new Decimal(fee).dividedBy(SATS_PER_BTC));
+				summary["totalFees"] = summary.totalFees.plus(new Decimal(fee).dividedBy(SATS_PER_PRCX));
 				summary["totalBytes"] += size;
 				summary["totalWeight"] += weight;
 

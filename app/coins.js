@@ -1,9 +1,9 @@
 "use strict";
 
-const btc = require("./coins/btc.js");
+const prcx = require("./coins/prcx.js");
 
 module.exports = {
-	"BTC": btc,
+	"PRCX": prcx,
 
-	"coins":["BTC"]
+	"coins":["PRCX"]
 };
