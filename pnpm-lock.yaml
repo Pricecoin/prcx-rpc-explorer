@@ -1563,7 +1563,7 @@ packages:
       bip174: 2.1.1
       bs58check: 3.0.1
       typeforce: 1.18.0
-      varuint-pricecoinx: 1.1.2
+      varuint-bitcoin: 1.1.2
     dev: false
 
   /body-parser/1.20.1:
@@ -4281,7 +4281,7 @@ packages:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  /varuint-pricecoinx/1.1.2:
+  /varuint-bitcoin/1.1.2:
     resolution: {integrity: sha512-4EVb+w4rx+YfVM32HQX42AbbT7/1f5zwAYhIujKXKk8NQK+JfRVl3pqT3hjNn/L+RstigmGGKVwHA/P0wgITZw==}
     dependencies:
       safe-buffer: 5.2.1
