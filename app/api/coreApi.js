@@ -1,7 +1,7 @@
 "use strict";
 
 const debug = require("debug");
-const debugLog = debug("btcexp:core");
+const debugLog = debug("prcxexp:core");
 
 const fs = require('fs');
 
@@ -1472,8 +1472,8 @@ function getMempoolTxSummaries(allTxids, statusId, statusFunc) {
 			const results = [];
 			const txidKeysForCachePurge = {};
 
-			const btcToSat = (btcFloat) => {
-				return parseInt(new Decimal(btcFloat).times(SATS_PER_PRCX).toDP(0));
+			const prcxToSat = (prcxFloat) => {
+				return parseInt(new Decimal(prcxFloat).times(SATS_PER_PRCX).toDP(0));
 			};
 
 			for (let i = 0; i < txids.length; i++) {
@@ -1495,9 +1495,9 @@ function getMempoolTxSummaries(allTxids, statusId, statusFunc) {
 						try {
 							const item = await getMempoolTxDetails(txid, false);
 							const itemSummary = {
-								f: btcToSat(item.entry.fees.modified),
+								f: prcxToSat(item.entry.fees.modified),
 								
-								af: btcToSat(item.entry.fees.ancestor),
+								af: prcxToSat(item.entry.fees.ancestor),
 								asz: item.entry.ancestorsize,
 
 								a: item.entry.depends.map(x => mempoolCacheKeyForTxid(x)),

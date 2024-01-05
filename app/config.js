@@ -1,7 +1,7 @@
 "use strict";
 
 const debug = require("debug");
-const debugLog = debug("btcexp:config");
+const debugLog = debug("prcxexp:config");
 
 const fs = require('fs');
 const crypto = require('crypto');

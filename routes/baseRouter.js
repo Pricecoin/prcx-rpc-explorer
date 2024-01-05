@@ -1,7 +1,7 @@
 "use strict";
 
 const debug = require("debug");
-const debugLog = debug("btcexp:router");
+const debugLog = debug("prcxexp:router");
 
 const express = require('express');
 const csrfApi = require('csurf');
@@ -26,7 +26,7 @@ const config = require("./../app/config.js");
 const coreApi = require("./../app/api/coreApi.js");
 const addressApi = require("./../app/api/addressApi.js");
 const rpcApi = require("./../app/api/rpcApi.js");
-const btcQuotes = require("./../app/coins/btcQuotes.js");
+const prcxQuotes = require("./../app/coins/prcxQuotes.js");
 
 const forceCsrf = csrfApi({ ignoreMethods: [] });
 
@@ -832,7 +832,7 @@ router.get("/xyzpub/:extendedPubkey", asyncHandler(async (req, res, next) => {
 }));
 
 router.get("/block-stats", asyncHandler(async (req, res, next) => {
-	if (semver.lt(global.btcNodeSemver, rpcApi.minRpcVersions.getblockstats)) {
+	if (semver.lt(global.prcxNodeSemver, rpcApi.minRpcVersions.getblockstats)) {
 		res.locals.rpcApiUnsupportedError = {rpc:"getblockstats", version:rpcApi.minRpcVersions.getblockstats};
 	}
 
@@ -2343,7 +2343,7 @@ router.get("/quotes", function(req, res, next) {
 		viewType = req.query.viewType;
 	}
 
-	let listNewFirst = btcQuotes.items;
+	let listNewFirst = prcxQuotes.items;
 	for (let i = 0; i < listNewFirst.length; i++) {
 		listNewFirst[i].quoteIndex = i;
 	}
@@ -2412,7 +2412,7 @@ router.get("/quotes", function(req, res, next) {
 });
 
 router.get("/holidays", function(req, res, next) {
-	res.locals.btcHolidays = global.btcHolidays;
+	res.locals.prcxHolidays = global.prcxHolidays;
 
 	res.render("holidays");
 
@@ -2421,10 +2421,10 @@ router.get("/holidays", function(req, res, next) {
 
 router.get("/quote/:quoteIndex", function(req, res, next) {
 	res.locals.quoteIndex = parseInt(req.params.quoteIndex);
-	res.locals.btcQuotes = btcQuotes.items;
+	res.locals.prcxQuotes = prcxQuotes.items;
 
-	if (btcQuotes.items[res.locals.quoteIndex].duplicateIndex) {
-		let duplicateIndex = btcQuotes.items[res.locals.quoteIndex].duplicateIndex;
+	if (prcxQuotes.items[res.locals.quoteIndex].duplicateIndex) {
+		let duplicateIndex = prcxQuotes.items[res.locals.quoteIndex].duplicateIndex;
 
 		res.redirect(`${config.baseUrl}quote/${duplicateIndex}`);
 

@@ -3,9 +3,9 @@
 const fs = require("fs");
 
 const debug = require("debug");
-const debugLog = debug("btcexp:utils");
-const debugErrorLog = debug("btcexp:error");
-const debugErrorVerboseLog = debug("btcexp:errorVerbose");
+const debugLog = debug("prcxexp:utils");
+const debugErrorLog = debug("prcxexp:error");
+const debugErrorVerboseLog = debug("prcxexp:errorVerbose");
 
 const Decimal = require("decimal.js");
 const axios = require("axios");

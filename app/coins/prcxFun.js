@@ -478,7 +478,7 @@ module.exports = {
 			blockHeight: 761249,
 			summary: "@brqgoo's (second) LND-breaking transaction",
 			alertBodyHtml: "This transaction caused grief for multiple PricecoinX software projects (including this one...) It's a very large transaction that includes a huge number of empty input-script witness items. The underlying issue was inconsistency in handling of stack size relating to OP_SUCCESSx opcodes.",
-			referenceUrl: "https://github.com/btcsuite/btcd/issues/1906"
+			referenceUrl: "https://github.com/prcxsuite/prcxd/issues/1906"
 		},
 		{
 			type: "tx",

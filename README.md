@@ -160,7 +160,7 @@ Donate via PRCX Pay Server:
 
 Or, via a lightning address:
 
-thanks@donate.btc21.org
+thanks@donate.prcx21.org
 
 
 [npm-ver-img]: https://img.shields.io/npm/v/prcx-rpc-explorer.svg?style=flat

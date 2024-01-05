@@ -6,19 +6,19 @@ const url = require('url');
 const fs = require("fs");
 
 const debug = require("debug");
-const debugLog = debug("btcexp:config");
+const debugLog = debug("prcxexp:config");
 
-const btcUri = process.env.PRCXEXP_PRICECOINXD_URI ? url.parse(process.env.PRCXEXP_PRICECOINXD_URI, true) : { query: { } };
-const btcAuth = btcUri.auth ? btcUri.auth.split(':') : [];
+const prcxUri = process.env.PRCXEXP_PRICECOINXD_URI ? url.parse(process.env.PRCXEXP_PRICECOINXD_URI, true) : { query: { } };
+const prcxAuth = prcxUri.auth ? prcxUri.auth.split(':') : [];
 
 
 
 
 function loadFreshRpcCredentials() {
-	let username = btcAuth[0] || process.env.PRCXEXP_PRICECOINXD_USER;
-	let password = btcAuth[1] || process.env.PRCXEXP_PRICECOINXD_PASS;
+	let username = prcxAuth[0] || process.env.PRCXEXP_PRICECOINXD_USER;
+	let password = prcxAuth[1] || process.env.PRCXEXP_PRICECOINXD_PASS;
 
-	let authCookieFilepath = btcUri.query.cookie || process.env.PRCXEXP_PRICECOINXD_COOKIE || path.join(os.homedir(), '.pricecoinx', '.cookie');
+	let authCookieFilepath = prcxUri.query.cookie || process.env.PRCXEXP_PRICECOINXD_COOKIE || path.join(os.homedir(), '.pricecoinx', '.cookie');
 
 	let authType = "usernamePassword";
 
@@ -37,8 +37,8 @@ function loadFreshRpcCredentials() {
 	}
 
 	return {
-		host: btcUri.hostname || process.env.PRCXEXP_PRICECOINXD_HOST || "127.0.0.1",
-		port: btcUri.port || process.env.PRCXEXP_PRICECOINXD_PORT || 8332,
+		host: prcxUri.hostname || process.env.PRCXEXP_PRICECOINXD_HOST || "127.0.0.1",
+		port: prcxUri.port || process.env.PRCXEXP_PRICECOINXD_PORT || 8332,
 
 		authType: authType,
 
@@ -47,7 +47,7 @@ function loadFreshRpcCredentials() {
 		
 		authCookieFilepath: authCookieFilepath,
 		
-		timeout: parseInt(btcUri.query.timeout || process.env.PRCXEXP_PRICECOINXD_RPC_TIMEOUT || 5000),
+		timeout: parseInt(prcxUri.query.timeout || process.env.PRCXEXP_PRICECOINXD_RPC_TIMEOUT || 5000),
 	};
 }
 

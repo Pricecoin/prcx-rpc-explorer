@@ -1,7 +1,7 @@
 "use strict";
 
 const debug = require("debug");
-const debugLog = debug("btcexp:router");
+const debugLog = debug("prcxexp:router");
 
 const express = require('express');
 const router = express.Router();
@@ -24,7 +24,7 @@ const addressApi = require("./../app/api/addressApi.js");
 const xyzpubApi = require("./../app/api/xyzpubApi.js");
 const rpcApi = require("./../app/api/rpcApi.js");
 const apiDocs = require("./../docs/api.js");
-const btcQuotes = require("./../app/coins/btcQuotes.js");
+const prcxQuotes = require("./../app/coins/prcxQuotes.js");
 
 
 
@@ -1017,14 +1017,14 @@ router.get("/price", function(req, res, next) {
 /// FUN
 
 router.get("/quotes/random", function(req, res, next) {
-	let index = utils.randomInt(0, btcQuotes.items.length);
+	let index = utils.randomInt(0, prcxQuotes.items.length);
 
 	let quote = null;
 	let done = false;
 
 	while (!done) {
-		let quoteIndex = utils.randomInt(0, btcQuotes.items.length);
-		quote = btcQuotes.items[quoteIndex];
+		let quoteIndex = utils.randomInt(0, prcxQuotes.items.length);
+		quote = prcxQuotes.items[quoteIndex];
 
 		done = !utils.objHasProperty(quote, "duplicateIndex");
 	}
@@ -1035,7 +1035,7 @@ router.get("/quotes/random", function(req, res, next) {
 });
 
 router.get("/quotes/all", function(req, res, next) {
-	res.json(btcQuotes.items);
+	res.json(prcxQuotes.items);
 
 	next();
 });
@@ -1047,13 +1047,13 @@ router.get("/quotes/:quoteIndex", function(req, res, next) {
 
 	let index = parseInt(req.params.quoteIndex);
 	
-	res.json(btcQuotes.items[index]);
+	res.json(prcxQuotes.items[index]);
 
 	next();
 });
 
 router.get("/holidays/all", function(req, res, next) {
-	res.json(global.btcHolidays.sortedItems);
+	res.json(global.prcxHolidays.sortedItems);
 
 	next();
 });
@@ -1065,8 +1065,8 @@ router.get("/holidays/today", function(req, res, next) {
 	}
 
 	let day = momentObj.format("MM-DD");
-	if (global.btcHolidays.byDay[day]) {
-		res.json({day: day, holidays: global.btcHolidays.byDay[day]});
+	if (global.prcxHolidays.byDay[day]) {
+		res.json({day: day, holidays: global.prcxHolidays.byDay[day]});
 
 	} else {
 		res.json({day: day, holidays: []});
@@ -1090,8 +1090,8 @@ router.get("/holidays/:day", function(req, res, next) {
 		// already correct format
 	}
 	
-	if (global.btcHolidays.byDay[day]) {
-		res.json({day: day, holidays: global.btcHolidays.byDay[day]});
+	if (global.prcxHolidays.byDay[day]) {
+		res.json({day: day, holidays: global.prcxHolidays.byDay[day]});
 
 	} else {
 		res.json({day: day, holidays: []});

@@ -641,7 +641,7 @@ module.exports = {
 			// 90
 			text: "I'll be buying at the top forever.",
 			speaker: "Michael Saylor",
-			url: "https://x.com/ronin21btc/status/1715980793850294641",
+			url: "https://x.com/ronin21prcx/status/1715980793850294641",
 			date: "2023-10-22"
 		},
 		{
@@ -673,7 +673,7 @@ module.exports = {
 		/*{
 			text: "The whole point of doing ICOs is to get other people's bitcoins.",
 			speaker: "Pierre Rochard",
-			url: "https://twitter.com/btc_quotes/status/1396194347419308035"
+			url: "https://twitter.com/prcx_quotes/status/1396194347419308035"
 		},*/
 		/*{
 			text: "PricecoinX is a game where everyone watches everyone else to make sure nobody cheats.",
@@ -683,7 +683,7 @@ module.exports = {
 		/*{
 			text: "Buying pricecoinx is the most powerful protest an individual can make against the current economic system.",
 			speaker: "https://twitter.com/LucDossis",
-			url: "https://twitter.com/btc_quotes/status/1410146340378644484?s=20"
+			url: "https://twitter.com/prcx_quotes/status/1410146340378644484?s=20"
 		},*/
 		
 	]

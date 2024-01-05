@@ -11,14 +11,14 @@ const debug = require("debug");
 
 
 // start with this, we will update after loading any .env files
-const debugDefaultCategories = "btcexp:app,btcexp:error,btcexp:errorVerbose";
+const debugDefaultCategories = "prcxexp:app,prcxexp:error,prcxexp:errorVerbose";
 debug.enable(debugDefaultCategories);
 
 
-const debugLog = debug("btcexp:app");
-const debugErrorLog = debug("btcexp:error");
-const debugPerfLog = debug("btcexp:actionPerformace");
-const debugAccessLog = debug("btcexp:access");
+const debugLog = debug("prcxexp:app");
+const debugErrorLog = debug("prcxexp:error");
+const debugPerfLog = debug("prcxexp:actionPerformace");
+const debugAccessLog = debug("prcxexp:access");
 
 const configPaths = [
 	path.join(os.homedir(), ".config", "prcx-rpc-explorer.env"),
@@ -89,8 +89,8 @@ const qrcode = require("qrcode");
 const addressApi = require("./app/api/addressApi.js");
 const electrumAddressApi = require("./app/api/electrumAddressApi.js");
 const appStats = require("./app/appStats.js");
-const btcQuotes = require("./app/coins/btcQuotes.js");
-const btcHolidays = require("./app/coins/btcHolidays.js");
+const prcxQuotes = require("./app/coins/prcxQuotes.js");
+const prcxHolidays = require("./app/coins/prcxHolidays.js");
 const auth = require('./app/auth.js');
 const sso = require('./app/sso.js');
 const markdown = require("markdown-it")();
@@ -113,7 +113,7 @@ global.appVersion = package_json.version;
 global.cacheId = global.appVersion;
 debugLog(`Default cacheId '${global.cacheId}'`);
 
-global.btcNodeSemver = "0.0.0";
+global.prcxNodeSemver = "0.0.0";
 
 
 const baseActionsRouter = require('./routes/baseRouter.js');
@@ -399,25 +399,25 @@ function loadHistoricalDataForChain(chain) {
 function loadHolidays(chain) {
 	debugLog(`Loading holiday data`);
 
-	global.btcHolidays = btcHolidays;
-	global.btcHolidays.byDay = {};
-	global.btcHolidays.sortedDays = [];
-	global.btcHolidays.sortedItems = [...btcHolidays.items];
-	global.btcHolidays.sortedItems.sort((a, b) => a.date.localeCompare(b.date));
+	global.prcxHolidays = prcxHolidays;
+	global.prcxHolidays.byDay = {};
+	global.prcxHolidays.sortedDays = [];
+	global.prcxHolidays.sortedItems = [...prcxHolidays.items];
+	global.prcxHolidays.sortedItems.sort((a, b) => a.date.localeCompare(b.date));
 
-	global.btcHolidays.items.forEach(function(item) {
+	global.prcxHolidays.items.forEach(function(item) {
 		let day = item.date.substring(5);
 
-		if (!global.btcHolidays.sortedDays.includes(day)) {
-			global.btcHolidays.sortedDays.push(day);
-			global.btcHolidays.sortedDays.sort();
+		if (!global.prcxHolidays.sortedDays.includes(day)) {
+			global.prcxHolidays.sortedDays.push(day);
+			global.prcxHolidays.sortedDays.sort();
 		}
 
-		if (global.btcHolidays.byDay[day] == undefined) {
-			global.btcHolidays.byDay[day] = [];
+		if (global.prcxHolidays.byDay[day] == undefined) {
+			global.prcxHolidays.byDay[day] = [];
 		}
 
-		global.btcHolidays.byDay[day].push(item);
+		global.prcxHolidays.byDay[day].push(item);
 	});
 }
 
@@ -463,11 +463,11 @@ async function onRpcConnectionVerified(getnetworkinfo, getblockchaininfo) {
 
 	var match = bitcoinCoreVersionRegex.exec(getnetworkinfo.subversion);
 	if (match) {
-		global.btcNodeVersion = match[1];
+		global.prcxNodeVersion = match[1];
 
 		var semver4PartRegex = /^([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$/;
 
-		var semver4PartMatch = semver4PartRegex.exec(global.btcNodeVersion);
+		var semver4PartMatch = semver4PartRegex.exec(global.prcxNodeVersion);
 		if (semver4PartMatch) {
 			var p0 = semver4PartMatch[1];
 			var p1 = semver4PartMatch[2];
@@ -475,32 +475,32 @@ async function onRpcConnectionVerified(getnetworkinfo, getblockchaininfo) {
 			var p3 = semver4PartMatch[4];
 
 			// drop last segment, which usually indicates a bug fix release which is (hopefully) irrelevant for RPC API versioning concerns
-			global.btcNodeSemver = `${p0}.${p1}.${p2}`;
+			global.prcxNodeSemver = `${p0}.${p1}.${p2}`;
 
 		} else {
 			var semver3PartRegex = /^([0-9]+)\.([0-9]+)\.([0-9]+)$/;
 
-			var semver3PartMatch = semver3PartRegex.exec(global.btcNodeVersion);
+			var semver3PartMatch = semver3PartRegex.exec(global.prcxNodeVersion);
 			if (semver3PartMatch) {
 				var p0 = semver3PartMatch[1];
 				var p1 = semver3PartMatch[2];
 				var p2 = semver3PartMatch[3];
 
-				global.btcNodeSemver = `${p0}.${p1}.${p2}`;
+				global.prcxNodeSemver = `${p0}.${p1}.${p2}`;
 
 			} else {
 				// short-circuit: force all RPC calls to pass their version checks - this will likely lead to errors / instability / unexpected results
-				global.btcNodeSemver = "1000.1000.0"
+				global.prcxNodeSemver = "1000.1000.0"
 			}
 		}
 	} else {
 		// short-circuit: force all RPC calls to pass their version checks - this will likely lead to errors / instability / unexpected results
-		global.btcNodeSemver = "1000.1000.0"
+		global.prcxNodeSemver = "1000.1000.0"
 
 		debugErrorLog(`Unable to parse node version string: ${getnetworkinfo.subversion} - RPC versioning will likely be unreliable. Is your node a version of PricecoinX Core?`);
 	}
 	
-	debugLog(`RPC Connected: version=${getnetworkinfo.version} subversion=${getnetworkinfo.subversion}, parsedVersion(used for RPC versioning)=${global.btcNodeSemver}, protocolversion=${getnetworkinfo.protocolversion}, chain=${getblockchaininfo.chain}, services=${services}`);
+	debugLog(`RPC Connected: version=${getnetworkinfo.version} subversion=${getnetworkinfo.subversion}, parsedVersion(used for RPC versioning)=${global.prcxNodeSemver}, protocolversion=${getnetworkinfo.protocolversion}, chain=${getblockchaininfo.chain}, services=${services}`);
 
 	
 	// load historical/fun items for this chain

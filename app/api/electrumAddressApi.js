@@ -1,7 +1,7 @@
 "use strict";
 
 const debug = require("debug");
-const debugLog = debug("btcexp:electrum");
+const debugLog = debug("prcxexp:electrum");
 
 const config = require("./../config.js");
 const coins = require("../coins.js");

@@ -13,7 +13,7 @@ block content
 	- var tzMoment = moment.utc(new Date()).add(tzDiff, "hours");
 	- var tzDay = tzMoment.format("MM-DD");
 
-	if (global.btcHolidays.byDay[tzDay])
+	if (global.prcxHolidays.byDay[tzDay])
 		
 		- var day = tzDay;
 		- var dom = parseInt(day.substring(3));
@@ -25,7 +25,7 @@ block content
 				h5
 					i.bi-star-fill.text-warning
 					span.ms-2.fw-light.text-muted Today is...
-				each item in global.btcHolidays.byDay[tzDay]
+				each item in global.prcxHolidays.byDay[tzDay]
 					h6.fs-5.text-uppercase.fw-light.text-card-highlight.mt-3 #{item.name}!
 						span.ms-2 (#{months[currentMonth]} #{dom})
 				

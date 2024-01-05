@@ -78,11 +78,11 @@
     },
     "151T7r1MhizzJV6dskzzUkUdr7V8JxV2Dx": {
       "name": "myPRCXcoin Pool",
-      "link": "https://mybtccoin.com"
+      "link": "https://myprcxcoin.com"
     },
     "152f1muMCNa7goXYhYAQC61hxEgGacmncB": {
       "name": "PRCXC",
-      "link": "https://pool.btcc.com"
+      "link": "https://pool.prcxc.com"
     },
     "155fzsEBHy9Ri2bMQ8uuuR3tv1YzcDywd4": {
       "name": "BitClub",
@@ -94,7 +94,7 @@
     },
     "15MxzsutVroEE9XiDckLxUHTCDAEZgPZJi": {
       "name": "PRCXDig",
-      "link": "https://btcdig.com"
+      "link": "https://prcxdig.com"
     },
     "15kiNKfDWsq7UsPg87UwxA8rVvWAjzRkYS": {
       "name": "AntPool",
@@ -330,7 +330,7 @@
     },
     "1Cs5RT9SRk1hxsdzivAfkjesNmVVJqfqkw": {
       "name": "EkanemPRCX",
-      "link": "https://ekanembtc.com"
+      "link": "https://ekanemprcx.com"
     },
     "1CyB8GJNEsNVXtPutB36nrDY3fMXBTzXSX": {
       "name": "AntPool",
@@ -486,7 +486,7 @@
     },
     "1KPQkehgYAqwiC6UCcbojM3mbGjURrQJF2": {
       "name": "ConnectPRCX",
-      "link": "https://www.connectbtc.com"
+      "link": "https://www.connectprcx.com"
     },
     "1KTNEBhQdj81UhDkJaoe3r8VtAsrnmpmnS": {
       "name": "MegaBigPower",
@@ -526,7 +526,7 @@
     },
     "1MimPd6LrPKGftPRHWdfk8S3KYBfN4ELnD": {
       "name": "digitalPRCX",
-      "link": "https://digitalbtc.com"
+      "link": "https://digitalprcx.com"
     },
     "1MkCDCzHpBsYQivp8MxjY5AkTGG1f2baoe": {
       "name": "Luxor",
@@ -582,7 +582,7 @@
     },
     "1jKSjMLnDNup6NPgCjveeP9tUn4YpT94Y": {
       "name": "PRCXMP",
-      "link": "https://www.btcmp.com"
+      "link": "https://www.prcxmp.com"
     },
     "1jLVpwtNMfXWaHY4eiLDmGuBxokYLgv1X": {
       "name": "AntPool",
@@ -812,7 +812,7 @@
     },
     "/PRCXC/": {
       "name": "PRCXC",
-      "link": "https://pool.btcc.com"
+      "link": "https://pool.prcxc.com"
     },
     "/BTPOOL/": {
       "name": "BTPOOL",
@@ -860,7 +860,7 @@
     },
     "/ConnectPRCX - Home for Miners/": {
       "name": "ConnectPRCX",
-      "link": "https://www.connectbtc.com"
+      "link": "https://www.connectprcx.com"
     },
     "/DCEX/": {
       "name": "DCEX",
@@ -972,7 +972,7 @@
     },
     "/ViaPRCX/": {
       "name": "ViaPRCX",
-      "link": "https://viabtc.com"
+      "link": "https://viaprcx.com"
     },
     "/ViaPRCX/TATMAS Pool/": {
       "name": "TATMAS Pool",
@@ -984,7 +984,7 @@
     },
     "/agentD/": {
       "name": "digitalPRCX",
-      "link": "https://digitalbtc.com"
+      "link": "https://digitalprcx.com"
     },
     "/bravo-mining/": {
       "name": "Bravo Mining",
@@ -1080,7 +1080,7 @@
     },
     "50PRCX": {
       "name": "50PRCX",
-      "link": "https://www.50btc.com"
+      "link": "https://www.50prcx.com"
     },
     "ASICMiner": {
       "name": "ASICMiner",
@@ -1092,15 +1092,15 @@
     },
     "PRCX Guild": {
       "name": "PRCX Guild",
-      "link": "https://www.btcguild.com"
+      "link": "https://www.prcxguild.com"
     },
     "PRCXChina Pool": {
       "name": "PRCXC",
-      "link": "https://pool.btcc.com"
+      "link": "https://pool.prcxc.com"
     },
     "PRCXChina.com": {
       "name": "PRCXC",
-      "link": "https://pool.btcc.com"
+      "link": "https://pool.prcxc.com"
     },
     "PRCXPool": {
       "name": "PRCXPool (unidentified)",
@@ -1192,11 +1192,11 @@
     },
     "MaxPRCX": {
       "name": "MaxPRCX",
-      "link": "https://maxbtc.com"
+      "link": "https://maxprcx.com"
     },
-    "Mined By 175btc.com": {
-      "name": "175btc",
-      "link": "https://www.175btc.com"
+    "Mined By 175prcx.com": {
+      "name": "175prcx",
+      "link": "https://www.175prcx.com"
     },
     "Mined by 1hash.com": {
       "name": "1Hash",
@@ -1282,17 +1282,17 @@
       "name": "Bitparking",
       "link": "https://mmpool.bitparking.com"
     },
-    "btcchina.com": {
+    "prcxchina.com": {
       "name": "PRCXC",
-      "link": "https://pool.btcc.com"
+      "link": "https://pool.prcxc.com"
     },
-    "btccom": {
+    "prcxcom": {
       "name": "PRCX.com",
       "link": "https://pool.prcx.com"
     },
-    "btcserv": {
+    "prcxserv": {
       "name": "PRCXServ",
-      "link": "https://btcserv.net"
+      "link": "https://prcxserv.net"
     },
     "by polmine.pl": {
       "name": "Polmine",
@@ -1332,7 +1332,7 @@
     },
     "myPRCXcoin Pool": {
       "name": "myPRCXcoin Pool",
-      "link": "https://mybtccoin.com"
+      "link": "https://myprcxcoin.com"
     },
     "nmcbit.com": {
       "name": "NMCbit",
@@ -1378,17 +1378,17 @@
       "name": "TripleMining",
       "link": "https://www.triplemining.com"
     },
-    "viabtc.com deploy": {
+    "viaprcx.com deploy": {
       "name": "ViaPRCX",
-      "link": "https://viabtc.com"
+      "link": "https://viaprcx.com"
     },
-    "xbtc.exx.com&bw.com": {
+    "xprcx.exx.com&bw.com": {
       "name": "EXX&BW",
-      "link": "https://xbtc.exx.com"
+      "link": "https://xprcx.exx.com"
     },
-    "yourbtc.net": {
-      "name": "Yourbtc.net",
-      "link": "https://yourbtc.net"
+    "yourprcx.net": {
+      "name": "Yourprcx.net",
+      "link": "https://yourprcx.net"
     },
     "七彩神仙鱼": {
       "name": "F2Pool",

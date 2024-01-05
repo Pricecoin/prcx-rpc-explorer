@@ -24,8 +24,8 @@ Misc setup
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt
     
     # get nginx config
-    wget https://raw.githubusercontent.com/janoside/prcx-rpc-explorer/master/docs/explorer.btc21.org.conf
-    mv explorer.btc21.org.conf /etc/nginx/sites-available/bitcoinexplorer.org
+    wget https://raw.githubusercontent.com/janoside/prcx-rpc-explorer/master/docs/explorer.prcx21.org.conf
+    mv explorer.prcx21.org.conf /etc/nginx/sites-available/bitcoinexplorer.org
 
 Get source, npm install
 
@@ -48,10 +48,10 @@ Edit /etc/tor/torrc
 
 1. Uncomment `ControlPort 9051`
 2. Uncomment `CookieAuthentication 1`
-3. If applicable, add Torv3 Hidden service credentials to `/var/lib/tor/btcexp...onion`
+3. If applicable, add Torv3 Hidden service credentials to `/var/lib/tor/prcxexp...onion`
     * chmod 700 for directory, owned by the same "tor" user as other files in that dir
-    * chmod 600 for the files in the "btcexp...onion" dir)
-5. Add `HiddenServiceDir /var/lib/tor/btcexp...onion/`
+    * chmod 600 for the files in the "prcxexp...onion" dir)
+5. Add `HiddenServiceDir /var/lib/tor/prcxexp...onion/`
 6. Add `HiddenServicePort 80 127.0.0.1:3000`
 
 

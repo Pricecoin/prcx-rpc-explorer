@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 var debug = require("debug");
-var debugLog = debug("btcexp:config");
+var debugLog = debug("prcxexp:config");
 
 // to debug arg settings, enable the below line:
-//debug.enable("btcexp:*");
+//debug.enable("prcxexp:*");
 
 const args = require('meow')(`
 	Usage

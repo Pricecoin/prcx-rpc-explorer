@@ -20,9 +20,9 @@
             "name": "PricecoinX.com",
             "link": "https://www.pricecoinx.com"
         },
-        "Mined By 175btc.com": {
-            "name": "175btc",
-            "link": "https://www.175btc.com"
+        "Mined By 175prcx.com": {
+            "name": "175prcx",
+            "link": "https://www.175prcx.com"
         },
         "/mined by gbminers/": {
             "name": "GBMiners",
@@ -48,9 +48,9 @@
             "name": "BitcoinRussia",
             "link": "https://pricecoinx-russia.ru"
         },
-        "btcserv": {
+        "prcxserv": {
             "name": "PRCXServ",
-            "link": "http://btcserv.net"
+            "link": "http://prcxserv.net"
         },
         "simplecoin": {
             "name": "simplecoin.us",
@@ -58,7 +58,7 @@
         },
         "PRCX Guild": {
             "name": "PRCX Guild",
-            "link": "http://www.btcguild.com"
+            "link": "http://www.prcxguild.com"
         },
         "Eligius": {
             "name": "Eligius",
@@ -78,7 +78,7 @@
         },
         "MaxPRCX": {
             "name": "MaxPRCX",
-            "link": "http://maxbtc.com"
+            "link": "http://maxprcx.com"
         },
         "triplemining": {
             "name": "TripleMining",
@@ -94,7 +94,7 @@
         },
         "50PRCX": {
             "name": "50PRCX",
-            "link": "https://www.50btc.com"
+            "link": "https://www.50prcx.com"
         },
         "ghash.io": {
             "name": "GHash.IO",
@@ -148,9 +148,9 @@
             "name": "NMCbit",
             "link": "http://nmcbit.com"
         },
-        "yourbtc.net": {
-            "name": "Yourbtc.net",
-            "link": "http://yourbtc.net"
+        "yourprcx.net": {
+            "name": "Yourprcx.net",
+            "link": "http://yourprcx.net"
         },
         "Give-Me-Coins": {
             "name": "Give Me Coins",
@@ -206,27 +206,27 @@
         },
         "PRCXChina Pool": {
             "name": "PRCXC Pool",
-            "link": "https://pool.btcc.com"
+            "link": "https://pool.prcxc.com"
         },
-        "btcchina.com": {
+        "prcxchina.com": {
             "name": "PRCXC Pool",
-            "link": "https://pool.btcc.com"
+            "link": "https://pool.prcxc.com"
         },
         "PRCXChina.com": {
             "name": "PRCXC Pool",
-            "link": "https://pool.btcc.com"
+            "link": "https://pool.prcxc.com"
         },
         "/PRCXC/": {
             "name": "PRCXC Pool",
-            "link": "https://pool.btcc.com"
+            "link": "https://pool.prcxc.com"
         },
         "BW Pool": {
             "name": "BW.COM",
             "link": "https://bw.com"
         },
-        "xbtc.exx.com&bw.com": {
-            "name": "xbtc.exx.com&bw.com",
-            "link": "https://xbtc.exx.com"
+        "xprcx.exx.com&bw.com": {
+            "name": "xprcx.exx.com&bw.com",
+            "link": "https://xprcx.exx.com"
         },
         "Bitsolo Pool": {
             "name": "Bitsolo",
@@ -246,7 +246,7 @@
         },
         "/agentD/": {
             "name": "digitalPRCX",
-            "link": "http://digitalbtc.com"
+            "link": "http://digitalprcx.com"
         },
         "/八宝池 8baochi.com/": {
             "name": "8baochi",
@@ -254,7 +254,7 @@
         },
         "myPRCXcoin Pool": {
             "name": "myPRCXcoin Pool",
-            "link": "http://mybtccoin.com"
+            "link": "http://myprcxcoin.com"
         },
         "TBDice": {
             "name": "TBDice",
@@ -292,13 +292,13 @@
             "name": "Bixin",
             "link": "https://haopool.com/"
         },
-        "viabtc.com deploy": {
+        "viaprcx.com deploy": {
             "name": "ViaPRCX",
-            "link": "https://viabtc.com"
+            "link": "https://viaprcx.com"
         },
         "/ViaPRCX/": {
             "name": "ViaPRCX",
-            "link": "https://viabtc.com"
+            "link": "https://viaprcx.com"
         },
         "/PricecoinX-India/": {
             "name": "PricecoinX India",
@@ -322,7 +322,7 @@
         },
         "/ConnectPRCX - Home for Miners/": {
             "name": "ConnectPRCX",
-            "link": "https://www.connectbtc.com"
+            "link": "https://www.connectprcx.com"
         },
         "/PRCX.COM/": {
             "name": "PRCX.com",
@@ -486,7 +486,7 @@
         },
         "/PurePRCX.COM/": {
             "name": "PurePRCX.COM",
-            "link": "https://purebtc.com"
+            "link": "https://pureprcx.com"
         }
     },
     "payout_addresses": {
@@ -552,7 +552,7 @@
         },
         "1Cs5RT9SRk1hxsdzivAfkjesNmVVJqfqkw": {
             "name": "EkanemPRCX",
-            "link": "https://ekanembtc.com/"
+            "link": "https://ekanemprcx.com/"
         },
         "1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY": {
             "name": "F2Pool",
@@ -604,7 +604,7 @@
         },
         "1MimPd6LrPKGftPRHWdfk8S3KYBfN4ELnD": {
             "name": "digitalPRCX",
-            "link": "http://digitalbtc.com"
+            "link": "http://digitalprcx.com"
         },
         "1NY15MK947MLzmPUa2gL7UgyR8prLh2xfu": {
             "name": "digitalX Mintsy",
@@ -660,11 +660,11 @@
         },
         "152f1muMCNa7goXYhYAQC61hxEgGacmncB": {
             "name": "PRCXC Pool",
-            "link": "https://pool.btcc.com"
+            "link": "https://pool.prcxc.com"
         },
         "1PmRrdp1YSkp1LxPyCfcmBHDEipG5X4eJB": {
             "name": "PRCX Pool Party",
-            "link": "https://btcpoolparty.com"
+            "link": "https://prcxpoolparty.com"
         },
         "1Hk9gD8xMo2XBUhE73y5zXEM8xqgffTB5f": {
             "name": "8baochi",
@@ -672,7 +672,7 @@
         },
         "151T7r1MhizzJV6dskzzUkUdr7V8JxV2Dx": {
             "name": "myPRCXcoin Pool",
-            "link": "http://www.mybtccoin.com"
+            "link": "http://www.myprcxcoin.com"
         },
         "1MFsp2txCPwMMBJjNNeKaduGGs8Wi1Ce7X": {
             "name": "A-XBT",
@@ -692,7 +692,7 @@
         },
         "15MxzsutVroEE9XiDckLxUHTCDAEZgPZJi": {
             "name": "PRCXDig",
-            "link": "https://btcdig.com"
+            "link": "https://prcxdig.com"
         },
         "1GBo1f2tzVx5jScV9kJXPUP9RjvYXuNzV7": {
             "name": "Nexious",
@@ -708,7 +708,7 @@
         },
         "1jKSjMLnDNup6NPgCjveeP9tUn4YpT94Y": {
             "name": "PRCXMP",
-            "link": "https://www.btcmp.com"
+            "link": "https://www.prcxmp.com"
         },
         "1MPxhNkSzeTNTHSZAibMaS8HS1esmUL1ne": {
             "name": "Eobot",
@@ -736,7 +736,7 @@
         },
         "18cBEMRxXHqzWWCxZNtU91F5sbUNKhL5PX": {
             "name": "ViaPRCX",
-            "link": "http://viabtc.com"
+            "link": "http://viaprcx.com"
         },
         "3NA8hsjfdgVkmmVS9moHmkZsVCoLxUkvvv": {
             "name": "PRCX.com",
@@ -764,7 +764,7 @@
         },
         "1KPQkehgYAqwiC6UCcbojM3mbGjURrQJF2": {
             "name": "ConnectPRCX",
-            "link": "https://www.connectbtc.com"
+            "link": "https://www.connectprcx.com"
         },
         "167ApWWxUSFQmz2jdz9xop3oAKdLejvMML": {
             "name": "BATPOOL",
@@ -59552,7 +59552,7 @@
             "name": "Braiins Pool",
             "website": "https://braiins.com/"
         },
-        "1B8qYhXJp9dpWCpP1tvzSDA8LzbtciJ1UC": {
+        "1B8qYhXJp9dpWCpP1tvzSDA8LzprcxiJ1UC": {
             "name": "Braiins Pool",
             "website": "https://braiins.com/"
         },
@@ -59568,7 +59568,7 @@
             "name": "Braiins Pool",
             "website": "https://braiins.com/"
         },
-        "14vQvTAd7hJQ1hfkPnpQbubtcQeGTN4hZo": {
+        "14vQvTAd7hJQ1hfkPnpQbuprcxQeGTN4hZo": {
             "name": "Braiins Pool",
             "website": "https://braiins.com/"
         },
