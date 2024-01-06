@@ -113,8 +113,8 @@ module.exports = {
 		"regtest": new Decimal(50000000),
 		"signet": new Decimal(50000000)
 	},
-	targetBlockTimeSeconds: 600,
-	targetBlockTimeMinutes: 10,
+	targetBlockTimeSeconds: 30,
+	targetBlockTimeMinutes: .5,
 	currencyUnits:currencyUnits,
 	currencyUnitsByName:{"PRCX":currencyUnits[0], "mPRCX":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
 	baseCurrencyUnit:currencyUnits[3],
